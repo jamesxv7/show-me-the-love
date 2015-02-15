@@ -1,0 +1,115 @@
+/* --------------------------------------------------------------------------------
+
+Author: Jaime Olmo
+
+Description: Styles sheet for the San Valentine's gift to my wife, 
+www.jaimeolmo.com/yo-amo-a-dielimar/. In this styles I use vertical 
+and horizontal alignment, a div element fixed at the bottom of the browser 
+and media queries for responsive behavior.
+
+-------------------------------------------------------------------------------- */
+
+* {
+  	margin: 0;
+}
+
+html, body {
+	height: 100%;
+  	width: 100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	position: relative;
+}
+
+.page-wrap {
+  	min-height: 100%;
+ 	margin-bottom: -60px; 
+ 	position: relative;
+}
+
+.page-wrap:after {
+  	content: "";
+  	display: block;
+}
+
+.site-footer, .page-wrap:after {
+ 	height: 40px; 
+ 	line-height: 28px;
+}
+
+.site-footer {
+	padding: 0 20px;
+}
+
+#phrase {
+
+	font-size: 28px;
+	line-height: 28px;
+	padding-top: 14px;
+	padding-bottom: 8px;
+	width: 85%;
+	border-bottom: 2px solid #999;
+	display: block;
+	letter-spacing: -0.03em;
+}
+
+#nationality {
+	line-height: 24px;
+	font-size: 24px;
+	padding-top: 8px;
+}
+
+#nationality, #phrase {
+	margin: 0 auto;
+}
+
+#msg { 
+	width: 220px;
+	color: #fff;
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	background-color: rgba(255,0,0,0.75);
+	line-height:40px;
+	position: absolute;;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	#phrase {
+		padding-top:50px;
+	}
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (min-height : 480px) {
+	#phrase {
+		padding-top:50px;
+	}
+}
+
+@media(min-width:600px)
+{
+	#phrase {
+		font-size:48px;
+		line-height:48px;
+		padding-top:80px;
+		padding-bottom:12px;
+	}
+
+	#nationality {
+		line-height:34px;
+		font-size:34px;
+		padding-top:12px;
+	}
+}
